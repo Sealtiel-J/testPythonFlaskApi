@@ -20,6 +20,14 @@ components:
           type: "string"
         lname:
           type: "string"
+    parameters:
+      lname:
+        name: "lname"
+        description: "Last name of the person to get"
+        in: path
+        required: True
+        schema:
+          type: "string"
 
 paths:
   /people:
@@ -47,3 +55,6 @@ paths:
       responses:
         "201":
           description: "Successfully created person"
+  /people/{lname}:
+    get:
+      operationalId: "people.read_one"

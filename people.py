@@ -43,4 +43,4 @@ def create(person):
         }
         return PEOPLE[lname], 201
     else:
-        abort(406,f"")
+        abort(406, f"Person with last name {lname} already exists")
